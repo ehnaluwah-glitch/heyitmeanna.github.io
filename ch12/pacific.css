@@ -1,0 +1,293 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Tables */
+table {
+    border-collapse: collapse;
+    margin: auto;
+    border: 1px solid #3399CC;
+    width: 90%;
+}
+
+td, th {
+    padding: 5px;
+    border: 1px solid #3399CC;
+}
+
+td {
+    text-align: center;
+}
+
+.text {
+    text-align: left;
+}
+
+tr:nth-of-type(even) {
+    background-color: #DFEDF8;
+}
+
+/* Body */
+body {
+    background-color: #90C7E3;
+    color: #666666;
+    font-family: Arial, Verdana, sans-serif;
+    margin: 0;
+}
+
+/* Header */
+header {
+    background-color: #002171;
+    color: #FFFFFF;
+    font-family: Georgia, serif;
+    padding: 1em;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header a:link,
+header a:visited {
+    color: #FFFFFF;
+}
+
+header a:hover {
+    color: #90C7E3;
+}
+
+/* Main */
+main {
+    display: block;
+    padding: 0 1em;
+}
+
+/* Headings */
+h1 {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+h2 {
+    color: #1976D2;
+    font-family: Georgia, serif;
+}
+
+h3 {
+    font-family: Georgia, serif;
+}
+
+/* Navigation */
+nav {
+    text-align: center;
+    background-color: #FFFFFF;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav a:link {
+    color: #5C7FA3;
+}
+
+nav a:visited {
+    color: #344873;
+}
+
+nav a:hover {
+    color: #A52A2A;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+nav li {
+    padding: .5em 1em;
+    width: 100%;
+    border-bottom: 1px solid;
+}
+
+/* Misc */
+.resort {
+    color: #1976D2;
+    font-size: 1.2em;
+}
+
+dt {
+    color: #002171;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    font-size: .70em;
+    text-align: center;
+    font-style: italic;
+    padding: 1em;
+    background-color: #FFFFFF;
+}
+
+/* Sections */
+section {
+    padding: 0 .5em;
+}
+
+/* Layout */
+#wrapper {
+    background-color: #FFFFFF;
+}
+
+/* Hero Images */
+#homehero {
+    height: 300px;
+    background-image: url(coast.jpg);
+    background-size: 200% 100%;
+}
+
+#yurthero {
+    height: 300px;
+    background-image: url(yurt.jpg);
+    background-size: 200% 100%;
+}
+
+#trailhero {
+    height: 300px;
+    background-image: url(trail.jpg);
+    background-size: 200% 100%;
+}
+
+#reshero {
+    height: 300px;
+    background-image: url(ocean.jpg);
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+}
+
+#shophero {
+    background-image: url(psunset.jpg);
+}
+
+/* Mobile/Desktop toggle */
+#mobile {
+    display: inline;
+}
+
+#desktop {
+    display: none;
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1em;
+    width: 80%;
+}
+
+input, textarea {
+    margin-bottom: .5em;
+}
+
+/* Shop */
+.shop {
+    margin: 1em;
+    padding: 1em;
+    background-color: #F4F4F4;
+}
+
+/* ✅ FIXED: correct selector + valid float */
+.shop img {
+    float: left;
+    margin-right: 1em;
+}
+
+/* Prevent float issues */
+.shop::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* ========================= */
+/* Medium Display */
+@media (min-width: 600px) {
+
+    h1 {
+        font-size: 2em;
+        letter-spacing: .25em;
+    }
+
+    nav ul {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        padding-right: 2em;
+    }
+
+    nav li {
+        width: 12em;
+        border-bottom: none;
+    }
+
+    section {
+        padding: 0 2em;
+    }
+
+    #flow {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #mobile {
+        display: none;
+    }
+
+    #desktop {
+        display: inline;
+    }
+
+    #homehero,
+    #yurthero,
+    #trailhero,
+    #shophero {
+        background-size: 100% 100%;
+    }
+
+    form {
+        display: grid;
+        width: 60%;
+        gap: 1em;
+        grid-template-columns: 10em 1fr;
+    }
+
+    input[type="submit"] {
+        grid-column: 2 / 3;
+        width: 9em;
+    }
+}
+
+/* ========================= */
+/* Large Display */
+@media (min-width: 1024px) {
+
+    body {
+        background-image: linear-gradient(to bottom, #FFFFFF 20%, #90C7E3 60%, #FFFFFF 100%);
+    }
+
+    nav ul {
+        padding: 0 10%;
+    }
+
+    #wrapper {
+        margin: auto;
+        width: 80%;
+    }
+}
